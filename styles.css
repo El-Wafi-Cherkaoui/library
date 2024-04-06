@@ -182,7 +182,7 @@ input[type="search"]:focus{
 .shielf, .form{
     background-color: #E3FEF7;
     border-radius: 1vw;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 1vw;
     height: 70vh;
 }
@@ -203,6 +203,8 @@ input[type="search"]:focus{
     transition: all .5s ease;
     cursor: pointer;
     position: relative;
+    display: grid;
+    gap: 1vh;
 }
 .book:hover{
     box-shadow: 0.1vw .1vh .5vw #002f35;
@@ -290,6 +292,10 @@ form input:hover:not(input[type="checkbox"]){
     font-weight: bold;
     transition: all .2s;
 }
+.toggle_read:hover{
+    background-color: #E3FEF7;
+    color: #002f35;
+}
 .add_book_btn{
     padding: .5vh 1vw;
     background-color: #002f35d4;
@@ -311,5 +317,4 @@ form input:hover:not(input[type="checkbox"]){
     color: #002f35;
     opacity: .8;
     font-size: .8rem;
-    
 }
