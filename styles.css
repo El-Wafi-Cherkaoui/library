@@ -16,7 +16,7 @@ body{
     display: grid;
     grid-template-columns: 2fr 10fr;
     overflow: hidden;
-
+    position: relative;
     /* background-color: red; */
 }
 .sideBar{
@@ -186,6 +186,9 @@ input[type="search"]:focus{
     padding: 1vw;
     height: 70vh;
 }
+.shielf h1{
+    color: #002f35;
+}
 .shielf > div{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px ,1fr));
@@ -199,6 +202,7 @@ input[type="search"]:focus{
     box-shadow: 0.1vw .1vh .5vw #002f352e;
     transition: all .5s ease;
     cursor: pointer;
+    position: relative;
 }
 .book:hover{
     box-shadow: 0.1vw .1vh .5vw #002f35;
@@ -209,11 +213,10 @@ input[type="search"]:focus{
     height: fit-content;
     background-color: #135D66;
     color: #E3FEF7;
-
 }
 form{
     font-size: .8rem;
-    display: grid;
+    display: none;
     grid-template-columns: auto 1fr;
     gap: 1vh;
 }
@@ -243,4 +246,70 @@ form input:hover:not(input[type="checkbox"]){
     color: #E3FEF7;
     background-color: #135D66;
     outline: #E3FEF7 solid .1vw;
+}
+.finished::after{
+    content: url('./svgs/finished.svg');
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1vh 1vw;
+}
+.notFinished::after{
+    content: url('./svgs/notFinished.svg');
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1vh 1vw;
+}
+.book:hover h2::after{
+    filter: invert(99%) sepia(100%) saturate(50%) hue-rotate(150deg) brightness(106%) contrast(99%);
+}
+.del_btn{
+    background-color:#002f35;
+    color: #E3FEF7;
+    padding: .5vh 1vw;
+    outline: none;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .2s;
+}
+.del_btn:hover{
+    background-color: #E3FEF7;
+    color: rgba(255, 0, 0, 0.709);
+}
+.toggle_read{
+    background-color:#002f35;
+    color: #E3FEF7;
+    padding: .5vh 1vw;
+    outline: none;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .2s;
+}
+.add_book_btn{
+    padding: .5vh 1vw;
+    background-color: #002f35d4;
+    color: #E3FEF7;
+    outline: none;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+}
+.add_book_btn:hover{
+    background-color: #002f35;
+}
+#signature{
+    position: absolute;
+    bottom: 0;
+    left: 33vw;
+    width: 33vw;
+    text-align: center;
+    color: #002f35;
+    opacity: .8;
+    font-size: .8rem;
+    
 }

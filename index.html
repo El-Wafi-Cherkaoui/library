@@ -60,6 +60,7 @@
             <div class="header">
                 <input type="search" placeholder="Search Bar">
                 <div class="options">
+                    <button class="add_book_btn">Add Book</button>
                     <span>
                         <img src="./svgs/notifications.svg" alt="">
                     </span>
@@ -75,16 +76,12 @@
                 <div class="shielf">
                     <h1>My Shielf:</h1>
                     <div>
-                        <div class="book">
-                            <h2>Title</h2>
-                            <span>Author</span>
-                            <p>Number of pages</p>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="form">
                     <h3>Add Book</h3>
-                    <form>
+                    <form onsubmit="add_book(event)">
                         <label for="title">Book's Title:</label>
                         <input type="text" name="title" id="title">
                         <label for="author">Author's Name:</label>
@@ -96,6 +93,7 @@
                         <input type="submit" value="Add Book" name="" id="">
                     </form>
                 </div>
+                <span id="signature">Made By : Cherkaoui El Wafi</span>
             </div>
         </div>
     </div>
