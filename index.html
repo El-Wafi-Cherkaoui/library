@@ -68,7 +68,7 @@
                         <img src="./svgs/user.svg" alt="">
                     </span>
                     <select name="" id="">
-                        <option value="">Balogun</option>
+                        <option value="">Light mode</option>
                     </select>
                 </div>
             </div>
@@ -83,11 +83,11 @@
                     <h3>Add Book</h3>
                     <form onsubmit="add_book(event)">
                         <label for="title">Book's Title:</label>
-                        <input type="text" name="title" id="title">
+                        <input type="text" name="title" id="title" placeholder="Book's Title" required>
                         <label for="author">Author's Name:</label>
-                        <input type="text" name="author" id="author">
+                        <input type="text" name="author" id="author" placeholder="Author Name" required>
                         <label for="pages">Number Of Pages:</label>
-                        <input type="number" name="pages" id="pages">
+                        <input type="number" name="pages" id="pages" placeholder="Number of pages" required>
                         <label for="finished">Book is Finished:</label>
                         <input type="checkbox" name="finished" id="finished"> 
                         <input type="submit" value="Add Book" name="" id="">
