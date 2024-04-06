@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sideBar">
+            <h1>
+                <img src="./svgs/logo.svg" alt="">
+                My Shielf
+            </h1>
+            <ul class="navBar">
+                <li class="active">
+                    <img src="./svgs/myShielf.svg" alt="">
+                    <span>My Shielf</span>
+                </li>
+                <li>
+                    <img src="./svgs/popular.svg" alt="">
+                    <span>Popular</span>
+                </li>
+                <li>
+                    <img src="./svgs/audioBooks.svg" alt="">
+                    <span>Audio Books</span>
+                </li>
+                <li>
+                    <img src="./svgs/favourite.svg" alt="">
+                    <span>Favourite</span>
+                </li>
+                <li>
+                    <img src="./svgs/friends.svg" alt="">
+                    <span>Friends</span>
+                </li>
+                <li>
+                    <img src="./svgs/history.svg" alt="">
+                    <span>History</span>
+                </li>
+                
+            </ul>
+            <div class="navSettings">
+                <li>
+                    <img src="./svgs/settings.svg" alt="">
+                    <span>Settings</span>
+                </li>
+                <li>
+                    <img src="./svgs/support.svg" alt="">
+                    <span>Support</span>
+                </li>
+                <li>
+                    <img src="./svgs/logOut.svg" alt="">
+                    <span>Log Out</span>
+                </li>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <input type="search" placeholder="Search Bar">
+                <div class="options">
+                    <span>
+                        <img src="./svgs/notifications.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./svgs/user.svg" alt="">
+                    </span>
+                    <select name="" id="">
+                        <option value="">Balogun</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bodyContent">
+                <div class="shielf">
+                    <h1>My Shielf:</h1>
+                    <div>
+                        <div class="book">
+                            <h2>Title</h2>
+                            <span>Author</span>
+                            <p>Number of pages</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <h3>Add Book</h3>
+                    <form>
+                        <label for="title">Book's Title:</label>
+                        <input type="text" name="title" id="title">
+                        <label for="author">Author's Name:</label>
+                        <input type="text" name="author" id="author">
+                        <label for="pages">Number Of Pages:</label>
+                        <input type="number" name="pages" id="pages">
+                        <label for="finished">Book is Finished:</label>
+                        <input type="checkbox" name="finished" id="finished"> 
+                        <input type="submit" value="Add Book" name="" id="">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
