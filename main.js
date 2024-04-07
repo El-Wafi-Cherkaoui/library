@@ -9,6 +9,15 @@ function add_book(event){
     let new_book = new Book(title, author, pages, finished)
     library.push(new_book)
     refresh_books()
+    reset_form()
+}
+function reset_form(){
+    let ids = ["#title", "#author", "#pages"]
+    ids.forEach(id => {
+        document.querySelector(id).value = ""
+    });
+    document.querySelector('#finished').checked = false
+    toggle_addBook()
 }
 
 function Book(title, author, pages, finished){
@@ -45,14 +54,8 @@ function refresh_books(){
         let del_btn = document.createElement('button')
         del_btn.textContent = "Delete"
         del_btn.className = "del_btn"
-        let new_library = []
         del_btn.addEventListener("click", ()=>{
-            library.forEach(book => {
-                if (book.title != book_h2.textContent){
-                    new_library.push(book)
-                }
-            });
-            library = new_library
+            library = library.filter(book=> book.title != book_h2.textContent)
             refresh_books()
         })
         book_div.append(del_btn)
@@ -78,11 +81,12 @@ function refresh_books(){
         shielf.append(book_div)
     });
 }
-let form = document.querySelector('form')
 let add_book_btn = document.querySelector('.add_book_btn')
-console.log(form.style.display);
 add_book_btn.addEventListener('click', ()=>{
-    
+    toggle_addBook()
+})
+function toggle_addBook(){
+    let form = document.querySelector('form')
     if (form.style.display == "grid"){
         form.style.display = "none"
         add_book_btn.textContent = "Add Book"
@@ -91,4 +95,4 @@ add_book_btn.addEventListener('click', ()=>{
         form.style.display = "grid"
         add_book_btn.textContent = "Hide"
     }
-})
+}
