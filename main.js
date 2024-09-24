@@ -19,14 +19,14 @@ function reset_form(){
     document.querySelector('#finished').checked = false
     toggle_addBook()
 }
-
-function Book(title, author, pages, finished){
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.finished = finished
+class Book{
+    constructor(title, author, pages, finished){
+        // this.title = title
+        this.author = author
+        this.pages = pages
+        this.finished = finished
+    }
 }
-
 function refresh_books(){
     let shielf = document.querySelector('.shielf > div')
     shielf.textContent = ""
